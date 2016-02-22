@@ -19,8 +19,7 @@ describe('CalendarRange', function() {
             if(result.pass) {
               result.message = actual + ' matches ' + expected;
             }
-            else
-            {
+            else {
               result.message = actual + ' does not match ' + expected;
             }
 
@@ -33,14 +32,14 @@ describe('CalendarRange', function() {
   });
 
   it('should return the proper object for the given date', function() {
-    var date = new Date();
+    var date = new Date('2000-11-12');
     var prepared = CalendarRange.prepareDate(date);
 
     var day = date.getDate();
-    expect(prepared.weekday).toBe(day != 0 && day != 6);
-    expect(prepared.day).toBe(date.getDate());
-    expect(prepared.year).toBe(date.getFullYear());
-    expect(prepared.month).toBe(date.getMonth());
+    expect(prepared.weekday).toBe(false);
+    expect(prepared.day).toBe(12);
+    expect(prepared.year).toBe(2000);
+    expect(prepared.month).toBe(10); // js Date's months start from 0 so November is 10
     expect(prepared.date).toEqual(date);
   });
 
@@ -78,6 +77,7 @@ describe('CalendarRange', function() {
     for (var i = 0; i < range.days.length; i++) {
       var current = range.days[i];
       expect(CalendarRange.prepareDate(current.date)).toEqual(current);
-    }  });
+    }
+  });
 
 });
