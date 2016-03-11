@@ -1,1 +1,27 @@
-/* your css code goes here */
+.box {
+	display: inline-block;
+	width: 150px;
+	height:150px;
+	border: solid black .5px;
+}
+
+body {
+	width: 1130px;
+}
+
+#month {
+	width:15%;
+	float:left;
+	margin-left:5px;
+}
+
+header {
+	position:fixed;
+}
+.container {
+	margin-top: 13px
+}
+
+.gray {
+	color: gray
+}
