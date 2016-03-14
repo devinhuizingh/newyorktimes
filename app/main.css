@@ -1,27 +1,23 @@
 .box {
 	display: inline-block;
-	width: 150px;
-	height:150px;
-	border: solid black .5px;
+	width: 125px;
+	height:125px;
+	border: solid black .1px;
 }
 
-body {
-	width: 1130px;
-}
 
-#month {
-	width:15%;
-	float:left;
-	margin-left:5px;
-}
-
-header {
-	position:fixed;
-}
 .container {
-	margin-top: 13px
+	width: 940px;
+	margin: 0 auto;
 }
 
 .gray {
-	color: gray
+	background-color: #eeeeee
 }
+
+.title {
+	font-weight: bolder;
+	text-align: center;
+	font-size: 2em;
+}
+
