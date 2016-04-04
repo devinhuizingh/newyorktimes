@@ -15,8 +15,11 @@ module.exports = function(config) {
 
     // list of files / patterns to load in the browser
     files: [
-      'calendarRange.js',
-      'calendarRangeSpec.js'
+      'node_modules/jquery/dist/jquery.min.js',
+      'app/bower_components/angular/angular.min.js',
+      'app/bower_components/angular-mocks/angular-mocks.js',
+      'app/*.js', // this will pick up both spec and app
+      'app/*.html' // for our directive templates
     ],
 
 

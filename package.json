@@ -9,8 +9,10 @@
   "author": "",
   "license": "ISC",
   "devDependencies": {
+    "jquery": "^2.2.1",
     "karma": "^0.12.17",
     "karma-chrome-launcher": "^0.1.5",
-    "karma-jasmine": "^0.1.5"
+    "karma-jasmine": "^0.1.5",
+    "karma-ng-html2js-preprocessor": "^0.2.1"
   }
 }
