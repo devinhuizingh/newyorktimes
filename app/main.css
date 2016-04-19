@@ -3,8 +3,13 @@
 	width: 125px;
 	height:125px;
 	border: solid black .1px;
-}
+	
 
+}
+.box:hover {
+	background-color: orange;
+	transform: scale(1.05);
+}
 
 .container {
 	width: 940px;
@@ -18,6 +23,20 @@
 .title {
 	font-weight: bolder;
 	text-align: center;
+	font-size: 2.1em;
+	font-family: 'Bevan', cursive;
+}
+
+.headline {
 	font-size: 2em;
+	font-family: 'Bevan', cursive;
+}
+
+button {
+	    margin-left: 16px;
+}
+
+.future {
+	background-color: red
 }
 

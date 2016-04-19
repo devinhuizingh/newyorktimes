@@ -13,9 +13,14 @@
 	</div>
 </header>
 <div class="container">
+	<div class="headline"><a href="{{link}}" target="blank">{{headline}}</a></div>
 	<div class="title">{{monthModel}} {{yearModel}}
 	</div>
-	<div class="box" ng-repeat="day in days" ng-class="{gray: day.month != current}" >
-		{{day.day}}
+	<div class="box" ng-repeat="day in days" ng-class="{gray: day.month != current, future: day.numberdate > day.todaydate}" ng-click='getHeadline(day.year+day.twomonth+day.twoday)'>
+		{{day.day}} 
+
+		
+
 	</div>
+	
 </div>

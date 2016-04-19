@@ -2,15 +2,22 @@ var CalendarRange = {
 
   DAY : 24 * 60 * 60 * 1000,
 
+  
+
   prepareDate : function(date) {
     date = new Date(date);
     var day = date.getDay();
     return {
       date : date,
+      numberdate : Number(date),
+      todaydate : Number(new Date()),
       weekday : day != 0 && day != 6,
       day : date.getDate(),
-      month : date.getMonth(),
+      twoday : ("0" + date.getDate()).slice(-2),
+      month : (date.getMonth())+1,
+      twomonth : ("0" + (date.getMonth()+1)).slice(-2),
       year : date.getFullYear()
+      
     };
   },
 
