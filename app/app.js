@@ -20,7 +20,7 @@ angular.module('calendarDemoApp', [])
 				$scope.days = $scope.range.days;
 				$scope.current = $scope.range.days[10].month;
 				$scope.years = [];
-				for (var i = $scope.range.days[0].year-40; i < $scope.range.days[0].year+1; i++) {
+				for (var i = $scope.range.days[0].year-150; i < $scope.range.days[0].year+1; i++) {
 					 	$scope.years.push(i);
 
 					};
@@ -40,7 +40,7 @@ angular.module('calendarDemoApp', [])
 				
 				 	
 				 	$http.get(url).then(function(response) {
-				 		
+				 		console.log(response);
 				 		$scope.headline=response.data.response.docs[0].headline.main;
 				 		$scope.link=response.data.response.docs[0].web_url;
 				 		
