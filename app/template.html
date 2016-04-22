@@ -1,19 +1,15 @@
 <header>	
-	<div id="month">
+	<div id="select">
 	    <select id='getMonth' ng-model="monthModel" ng-change="init()" ng-options="month as month for month in months">
-	    
 	    </select> 
 	</div>
-
-	<div id="year">
-	    <select id='getYear' ng-model="yearModel" ng-change="init()" ng-options="year as year for year in years">
-	    
-	   
+	<div id="select">
+		<select id='getYear' ng-model="yearModel" ng-change="init()" ng-options="year as year for year in years">
 	    </select> 
 	</div>
 </header>
 <div class="container">
-	<div class="headline"><a href="{{link}}" target="blank">{{headline}}</a></div>
+	
 	<div class="title">{{monthModel}} {{yearModel}}
 	</div>
 	<div class="box" ng-repeat="day in days" ng-class="{gray: day.month != current, future: day.numberdate > day.todaydate}" ng-click='getHeadline(day.year+day.twomonth+day.twoday)'>
@@ -24,3 +20,23 @@
 	</div>
 	
 </div>
+
+<!-- The overlay -->
+<div id="myNav" class="overlay">
+
+  <!-- Button to close the overlay navigation -->
+  <a href="javascript:void(0)" class="closebtn" ng-click="closeNav()">&times;</a>
+
+  <!-- Overlay content -->
+  <div class="overlay-content">
+    <div class="big ">
+    	<div class="date">{{date}}</div>
+    	<div class="headline">{{headline}}</div> 
+    	<div class="paragraph">{{paragraph}}</div>
+    	<div class="link"><a href="{{link}}">See article on NYT website</a></div>
+    </div>
+  </div>
+
+</div>
+
+<!-- Use any element to open/show the overlay navigation menu -->

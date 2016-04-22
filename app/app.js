@@ -37,16 +37,28 @@ angular.module('calendarDemoApp', [])
 				$scope.getHeadline = function(d) {
 			 		date=d;
 			 		var url = 'http://api.nytimes.com/svc/search/v2/articlesearch.json?begin_date=' + date +'&end_date=' + date +'&api-key=b7a5aeb55c2cc96f89d0c7ce999ddcb4:12:74992683';
-				
-				 	
+					
 				 	$http.get(url).then(function(response) {
 				 		console.log(response);
 				 		$scope.headline=response.data.response.docs[0].headline.main;
+				 		$scope.paragraph=response.data.response.docs[0].lead_paragraph;
 				 		$scope.link=response.data.response.docs[0].web_url;
+				 		uglydate=response.data.response.docs[0].pub_date;
+				 		$scope.date= uglydate.charAt(5)+uglydate.charAt(6) +"/"+uglydate.charAt(8)+uglydate.charAt(9)+"/"+uglydate.charAt(0)+uglydate.charAt(1)+uglydate.charAt(2)+uglydate.charAt(3);
 				 		
+				 		openNav();
 
+				 	})  
+				}
 
-					})  
+				
+				openNav = function() {
+				    document.getElementById("myNav").style.width = "100%";
+				}
+
+				
+				$scope.closeNav = function() {
+				    document.getElementById("myNav").style.width = "0%";
 				}
 
 			}
