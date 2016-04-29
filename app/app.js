@@ -1,6 +1,6 @@
 angular.module('calendarDemoApp', [])
 		
-	.directive('calendar', ['$http', function($http){
+	.directive('calendar', ['$http', function($http, $timeout){
 		_$http=$http;
 		return{
 			restrict: 'E',
@@ -13,7 +13,8 @@ angular.module('calendarDemoApp', [])
 				//console.log(headline);
 			    $scope.months = ["January","February","March","April","May","June","July","August","September","October","November","December"];
 			    $scope.monthModel = $scope.months[now.getMonth()];
-			    $scope.headline= "Headline will appear here!";
+			    $scope.intro= "This project was made to experiment with Angular Directives.  It started with just displaying a calendar, but morphed into a fun app that lets you display an article from the New York Times from many years in the past.  Not all links work, but they are provided directly from the API. So if you care... please write a letter to the New York Times, and ask them to fix it. :-)";
+				$scope.headline= "The Headline will appear here!";
 				$scope.yearModel = now.getFullYear();
 				
 				$scope.range = CalendarRange.getMonthlyRange(now);
@@ -39,7 +40,7 @@ angular.module('calendarDemoApp', [])
 			 		var url = 'http://api.nytimes.com/svc/search/v2/articlesearch.json?begin_date=' + date +'&end_date=' + date +'&api-key=b7a5aeb55c2cc96f89d0c7ce999ddcb4:12:74992683';
 					
 				 	$http.get(url).then(function(response) {
-				 		console.log(response);
+				 		//console.log(response);
 				 		$scope.headline=response.data.response.docs[0].headline.main;
 				 		$scope.paragraph=response.data.response.docs[0].lead_paragraph;
 				 		$scope.link=response.data.response.docs[0].web_url;
@@ -54,12 +55,18 @@ angular.module('calendarDemoApp', [])
 				
 				openNav = function() {
 				    document.getElementById("myNav").style.width = "100%";
+				    
+				        
+				    
+
 				}
 
 				
 				$scope.closeNav = function() {
 				    document.getElementById("myNav").style.width = "0%";
+					$scope.second=true;
 				}
+				openNav();
 
 			}
 			

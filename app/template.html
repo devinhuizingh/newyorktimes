@@ -2,8 +2,7 @@
 	<div id="select">
 	    <select id='getMonth' ng-model="monthModel" ng-change="init()" ng-options="month as month for month in months">
 	    </select> 
-	</div>
-	<div id="select">
+	
 		<select id='getYear' ng-model="yearModel" ng-change="init()" ng-options="year as year for year in years">
 	    </select> 
 	</div>
@@ -29,14 +28,14 @@
 
   <!-- Overlay content -->
   <div class="overlay-content">
-    <div class="big ">
+    <div class="big" >
     	<div class="date">{{date}}</div>
-    	<div class="headline">{{headline}}</div> 
+    	<div class="intro" ng-if="!second">{{intro}}</div>
+    	<div class="headline" ng-if="second">{{headline}}</div> 
     	<div class="paragraph">{{paragraph}}</div>
-    	<div class="link"><a href="{{link}}">See article on NYT website</a></div>
+    	<div class="link" ng-if="second"><a href="{{link}}" target="_blank">See article on NYT website</a></div>
     </div>
   </div>
 
 </div>
 
-<!-- Use any element to open/show the overlay navigation menu -->
