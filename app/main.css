@@ -7,7 +7,7 @@
 	display: inline-block;
 	width: 125px;
 	height:125px;
-	border: solid black .1px;
+	border: solid rgb(0, 20, 51) .1px;
     box-sizing: border-box;
     padding: 0 6px;
     cursor: pointer;
