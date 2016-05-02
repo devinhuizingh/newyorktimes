@@ -68,6 +68,7 @@ button {
    border: .5;
    border-radius: 0;
    height: 34px;
+   color: rgb(0, 20, 51);
 }
 
 /* The Overlay (content) */
