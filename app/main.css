@@ -11,8 +11,7 @@
     box-sizing: border-box;
     padding: 0 6px;
     cursor: pointer;
-	
-
+	color: rgb(0, 20, 51);
 }
 
 #getMonth:hover, #getYear:hover {
@@ -40,14 +39,20 @@
 	font-weight: bolder;
 	text-align: center;
 	font-size: 2.1em;
+    color: rgb(0, 20, 51);
+}
+
+.intro {
+    color: rgb(0, 20, 51);
 }
 
 .headline {
 	font-size: 2em;
+    color: rgb(0, 20, 51);
 }
 
 button {
-	    margin-left: 16px;
+	margin-left: 16px;
 }
 
 .future {
@@ -69,6 +74,7 @@ button {
 .date{
 	float: left;
 	margin: 10px;
+    color: rgb(0, 20, 51);
 }
 .big .headline {
 	margin-top: 42px;
@@ -81,6 +87,7 @@ button {
 	float: right;
     width: 80%;
     margin-right: 30px;
+    color: rgb(0, 20, 51);
 }
 .link {
 	float: right;
