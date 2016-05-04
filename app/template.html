@@ -1,21 +1,17 @@
 <header>	
 	<div id="select">
-	    <select id='getMonth' ng-model="monthModel" ng-change="init()" ng-options="month as month for month in months">
+	    <select id="getMonth" ng-model="monthModel" ng-change="init()" ng-options="month as month for month in months">
 	    </select> 
 	
-		<select id='getYear' ng-model="yearModel" ng-change="init()" ng-options="year as year for year in years">
+		<select id="getYear" ng-model="yearModel" ng-change="init()" ng-options="year as year for year in years">
 	    </select> 
 	</div>
 </header>
 <div class="container">
-	
 	<div class="title">{{monthModel}} {{yearModel}}
 	</div>
-	<div class="box" ng-repeat="day in days" ng-class="{gray: day.month != current, future: day.numberdate > day.todaydate}" ng-click='getHeadline(day.year+day.twomonth+day.twoday)'>
+	<div class="box" ng-repeat="day in days" ng-class="{gray: day.month != current, future: day.numberdate > day.todaydate}" ng-click="getHeadline(day.year+day.twomonth+day.twoday)">
 		{{day.day}} 
-
-		
-
 	</div>
 	
 </div>
@@ -23,7 +19,7 @@
 <!-- The overlay -->
 <div id="myNav" class="overlay">
 
-  <!-- Button to close the overlay navigation -->
+  <!-- Button to close the overlay -->
   <a href="javascript:void(0)" class="closebtn" ng-click="closeNav()">&times;</a>
 
   <!-- Overlay content -->

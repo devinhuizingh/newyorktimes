@@ -1,6 +1,6 @@
 angular.module('calendarDemoApp', [])
 		
-	.directive('calendar', ['$http', function($http, $timeout){
+	.directive('calendar', ['$http', function($http){
 		_$http=$http;
 		return{
 			restrict: 'E',
@@ -16,7 +16,6 @@ angular.module('calendarDemoApp', [])
 			    $scope.intro= "This project was made to experiment with Angular Directives.  It started with just displaying a calendar, but morphed into a fun app that lets you display an article from the New York Times from many years in the past.  Not all links work, but they are provided directly from the API. So if you care... please write a letter to the New York Times, and ask them to fix it. :-)";
 				$scope.headline= "The Headline will appear here!";
 				$scope.yearModel = now.getFullYear();
-				
 				$scope.range = CalendarRange.getMonthlyRange(now);
 				$scope.days = $scope.range.days;
 				$scope.current = $scope.range.days[10].month;
@@ -56,9 +55,6 @@ angular.module('calendarDemoApp', [])
 				openNav = function() {
 				    document.getElementById("myNav").style.width = "100%";
 				    
-				        
-				    
-
 				}
 
 				
@@ -69,7 +65,6 @@ angular.module('calendarDemoApp', [])
 				openNav();
 
 			}
-			
 		}
 	}])
 	
