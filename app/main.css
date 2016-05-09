@@ -1,5 +1,5 @@
-* {
-	font-family: 'Bevan', cursive;
+body {
+	font-family: 'Bevan', sans-serif;
 }
 
 
@@ -41,9 +41,15 @@
 	font-size: 2.1em;
     color: rgb(0, 20, 51);
 }
-
-.intro {
+.error {
+    text-align: center;
+    font-size: 1.3em;
     color: rgb(0, 20, 51);
+}
+
+.intro, .introHeader {
+    color: rgb(0, 20, 51);
+    margin: 60px;
 }
 
 .headline {
@@ -56,7 +62,7 @@ button {
 }
 
 .future {
-	background-color: red
+	background-color: #FF9898
 }
 
 #select select {
@@ -109,6 +115,7 @@ button {
 }
 #myNav a:link{
     color: orange;
+    text-decoration: none;
 }
 
 /* The Overlay (background) */
@@ -142,13 +149,6 @@ button {
 
     
 }
-
-.intro {
-
-    margin: 60px;
-
-}
-
 
 .closebtn {
     position: absolute;

@@ -13,6 +13,7 @@ angular.module('calendarDemoApp', [])
 				//console.log(headline);
 			    $scope.months = ["January","February","March","April","May","June","July","August","September","October","November","December"];
 			    $scope.monthModel = $scope.months[now.getMonth()];
+			    $scope.introHeader= "NEW YORK TIMES CALENDAR"
 			    $scope.intro= "This project was made to experiment with Angular Directives.  It started with just displaying a calendar, but morphed into a fun app that lets you display an article from the New York Times from many years in the past.  Not all links work, but they are provided directly from the API. So if you care... please write a letter to the New York Times, and ask them to fix it. :-)";
 				$scope.headline= "The Headline will appear here!";
 				$scope.yearModel = now.getFullYear();
@@ -40,15 +41,22 @@ angular.module('calendarDemoApp', [])
 					
 				 	$http.get(url).then(function(response) {
 				 		//console.log(response);
-				 		$scope.headline=response.data.response.docs[0].headline.main;
-				 		$scope.paragraph=response.data.response.docs[0].lead_paragraph;
-				 		$scope.link=response.data.response.docs[0].web_url;
-				 		uglydate=response.data.response.docs[0].pub_date;
-				 		$scope.date= uglydate.charAt(5)+uglydate.charAt(6) +"/"+uglydate.charAt(8)+uglydate.charAt(9)+"/"+uglydate.charAt(0)+uglydate.charAt(1)+uglydate.charAt(2)+uglydate.charAt(3);
-				 		
-				 		openNav();
-
-				 	})  
+				 		if (response.data.response.docs[0]) {
+				 			$scope.error=false;
+					 		$scope.headline=response.data.response.docs[0].headline.main;
+					 		$scope.paragraph=response.data.response.docs[0].lead_paragraph;
+					 		$scope.link=response.data.response.docs[0].web_url;
+					 		uglydate=response.data.response.docs[0].pub_date;
+					 		$scope.date= uglydate.charAt(5)+uglydate.charAt(6) +"/"+uglydate.charAt(8)+uglydate.charAt(9)+"/"+uglydate.charAt(0)+uglydate.charAt(1)+uglydate.charAt(2)+uglydate.charAt(3);
+					 		openNav();
+					 		}
+				 		else {
+				 			$scope.error=true
+				 		}
+				 		}), function(response){
+				 			console.log(response);
+				 			$scope.error=true
+				 		}  
 				}
 
 				

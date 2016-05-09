@@ -10,6 +10,8 @@
 <div class="container">
 	<div class="title">{{monthModel}} {{yearModel}}
 	</div>
+	<div ng-if="error" class="error">For some reason that day didn't return a headline... try another one
+	</div>
 	<div class="box" ng-repeat="day in days" ng-class="{gray: day.month != current, future: day.numberdate > day.todaydate}" ng-click="getHeadline(day.year+day.twomonth+day.twoday)">
 		{{day.day}} 
 	</div>
@@ -26,6 +28,7 @@
   <div class="overlay-content">
     <div class="big" >
     	<div class="date">{{date}}</div>
+    	<div class="introHeader" ng-if="!second"><h1>{{introHeader}}</h1></div>
     	<div class="intro" ng-if="!second">{{intro}}</div>
     	<div class="headline" ng-if="second">{{headline}}</div> 
     	<div class="paragraph">{{paragraph}}</div>
