@@ -11,10 +11,10 @@ angular.module('calendarDemoApp', [])
 				var now = new Date();
 				$scope.now = now;
 				//console.log(headline);
-			    $scope.months = ["January","February","March","April","May","June","July","August","September","October","November","December"];
-			    $scope.monthModel = $scope.months[now.getMonth()];
-			    $scope.introHeader= "NEW YORK TIMES CALENDAR"
-			    $scope.intro= "This project was made to experiment with Angular Directives.  It started with just displaying a calendar, but morphed into a fun app that lets you display an article from the New York Times from many years in the past.  Not all links work, but they are provided directly from the API. So if you care... please write a letter to the New York Times, and ask them to fix it. :-)";
+				$scope.months = ["January","February","March","April","May","June","July","August","September","October","November","December"];
+				$scope.monthModel = $scope.months[now.getMonth()];
+				$scope.introHeader= "NEW YORK TIMES CALENDAR"
+				$scope.intro= "This project was made to experiment with Angular Directives.  It started with just displaying a calendar, but morphed into a fun app that lets you display an article from the New York Times from many years in the past.  Not all links work, but they are provided directly from the API. So if you care... please write a letter to the New York Times, and ask them to fix it. :-)";
 				$scope.headline= "The Headline will appear here!";
 				$scope.yearModel = now.getFullYear();
 				$scope.range = CalendarRange.getMonthlyRange(now);
@@ -22,9 +22,9 @@ angular.module('calendarDemoApp', [])
 				$scope.current = $scope.range.days[10].month;
 				$scope.years = [];
 				for (var i = $scope.range.days[0].year-150; i < $scope.range.days[0].year+1; i++) {
-					 	$scope.years.push(i);
+					$scope.years.push(i);
 
-					};
+				};
 
 				
 				$scope.init = function () {
