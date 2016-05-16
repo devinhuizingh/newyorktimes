@@ -1,5 +1,5 @@
 body {
-	font-family: 'Bevan', sans-serif;
+    font-family: 'Bevan', sans-serif;
 }
 
 
@@ -18,27 +18,26 @@ body {
     cursor: pointer;
 }
 .box:hover {
-	background-color: orange;
-	transform: scale(1.05);
-    
+    background-color: orange;
+    transform: scale(1.05);
 }
 
 .container {
-	width: 940px;
-	margin: 0 auto;
+    width: 940px;
+    margin: 0 auto;
 }
 
 .gray {
-	background-color: #eeeeee
+    background-color: #eeeeee
 }
 .future:hover {
     background-color: grey
 }
 
 .title {
-	font-weight: bolder;
-	text-align: center;
-	font-size: 2.1em;
+    font-weight: bolder;
+    text-align: center;
+    font-size: 2.1em;
     color: rgb(0, 20, 51);
 }
 .error {
@@ -53,16 +52,16 @@ body {
 }
 
 .headline {
-	font-size: 2em;
+    font-size: 2em;
     color: rgb(0, 20, 51);
 }
 
 button {
-	margin-left: 16px;
+    margin-left: 16px;
 }
 
 .future {
-	background-color: #FF9898
+    background-color: #FF9898
 }
 
 #select select {
@@ -79,12 +78,12 @@ button {
 
 /* The Overlay (content) */
 .date{
-	float: left;
-	margin: 10px;
+    float: left;
+    margin: 10px;
     color: rgb(0, 20, 51);
 }
 .big .headline {
-	margin-top: 42px;
+    margin-top: 42px;
     margin-bottom: 15px;
     float: right;
     width: 80%;
@@ -97,7 +96,7 @@ button {
     color: rgb(0, 20, 51);
 }
 .link {
-	float: right;
+    float: right;
     width: 80%;
     margin-top: 18px;
     margin-right: 30px;
@@ -139,10 +138,10 @@ button {
 }
 .big{
     width:90%;
-	height: 90%;
-	float: right;
-	background-color: white;
-	border: solid black .1px;
+    height: 90%;
+    float: right;
+    background-color: white;
+    border: solid black .1px;
 }
 
 .closebtn {
