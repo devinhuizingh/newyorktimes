@@ -4,14 +4,14 @@ body {
 
 
 .box {
-	display: inline-block;
-	width: 125px;
-	height:125px;
-	border: solid rgb(0, 20, 51) .1px;
+    display: inline-block;
+    width: 125px;
+    height:125px;
+    border: solid rgb(0, 20, 51) .1px;
     box-sizing: border-box;
     padding: 0 6px;
     cursor: pointer;
-	color: rgb(0, 20, 51);
+    color: rgb(0, 20, 51);
 }
 
 #getMonth:hover, #getYear:hover {
@@ -66,15 +66,15 @@ button {
 }
 
 #select select {
-   background: transparent;
-   width: 100px;
-   padding: 3px;
-   font-size: 12px;
-   line-height: 1;
-   border: .5;
-   border-radius: 0;
-   height: 34px;
-   color: rgb(0, 20, 51);
+    background: transparent;
+    width: 100px;
+    padding: 3px;
+    font-size: 12px;
+    line-height: 1;
+    border: .5;
+    border-radius: 0;
+    height: 34px;
+    color: rgb(0, 20, 51);
 }
 
 /* The Overlay (content) */
@@ -91,7 +91,7 @@ button {
     margin-right: 30px;
 }
 .paragraph {
-	float: right;
+    float: right;
     width: 80%;
     margin-right: 30px;
     color: rgb(0, 20, 51);
@@ -101,7 +101,6 @@ button {
     width: 80%;
     margin-top: 18px;
     margin-right: 30px;
-    
 }
 .link a:hover{
     color:orange;
@@ -120,7 +119,6 @@ button {
 
 /* The Overlay (background) */
 .overlay {
-     
     height: 100%;
     width: 0;
     position: fixed; /* Stay in place */
@@ -130,7 +128,6 @@ button {
     background-color: rgb(0,0,0); 
     background-color: rgba(0,0,0, 0.9); 
     overflow-x: hidden; 
-    
 }
 
 
@@ -141,13 +138,11 @@ button {
     margin-top: 30px;
 }
 .big{
-	width:90%;
+    width:90%;
 	height: 90%;
 	float: right;
 	background-color: white;
 	border: solid black .1px;
-
-    
 }
 
 .closebtn {
